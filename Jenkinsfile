@@ -11,7 +11,7 @@ pipeline {
         stage('Resource Creation') {
             steps {
                 withCredentials([azureServicePrincipal('AzureServicePrincipal')]) {
-                    sh 'az storage account create --name stapple$(date +%s) --resource-group rg_apple --sku Standard_LRS --location westeurope'
+                    sh 'az storage account create --name cucumber$(date +%s) --resource-group rg_cucumber --sku Standard_LRS --location westeurope'
                 }
             }
         }
