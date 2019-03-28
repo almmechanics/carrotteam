@@ -5,8 +5,9 @@ agentName = "ubuntu"
 pipeline {
 
     agent { label agentName }
-    node {
+   
     stages {
+         node {
         stage('Login') {
             steps {
                 withCredentials([azureServicePrincipal('AzureServicePrincipal')]) {
