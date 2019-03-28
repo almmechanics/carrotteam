@@ -1,15 +1,12 @@
 agentName = "ubuntu"
-agentLabel = "${println 'Right Now the Agent Name is ' + agentName; return agentName}"
+//agentLabel = "${println 'Right Now the Agent Name is ' + agentName; return agentName}"
 
 
 pipeline {
 
-    //agent { label agentLabel }
-    agent none
+    agent { label agentName }
+
     stages {
-       node( agentLabel as String ) {  // Evaluate the node label later
-             echo "TEST"
-        }
         stage('Login') {
             steps {
                 withCredentials([azureServicePrincipal('AzureServicePrincipal')]) {
