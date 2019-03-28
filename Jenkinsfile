@@ -5,7 +5,7 @@ agentName = "ubuntu"
 pipeline {
 
     agent { label agentName }
-
+    node {
     stages {
         stage('Login') {
             steps {
@@ -35,5 +35,6 @@ pipeline {
                 }
             }
         }
+    }
     }
 }
