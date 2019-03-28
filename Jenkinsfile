@@ -4,9 +4,12 @@ agentLabel = "${println 'Right Now the Agent Name is ' + agentName; return agent
 
 pipeline {
 
-    agent { label agentLabel }
+    //agent { label agentLabel }
 
     stages {
+       node( agentLabel as String ) {  // Evaluate the node label later
+             echo "TEST"
+        }
         stage('Login') {
             steps {
                 withCredentials([azureServicePrincipal('AzureServicePrincipal')]) {
