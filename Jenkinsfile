@@ -5,7 +5,7 @@ agentLabel = "${println 'Right Now the Agent Name is ' + agentName; return agent
 pipeline {
 
     //agent { label agentLabel }
-
+    agent none
     stages {
        node( agentLabel as String ) {  // Evaluate the node label later
              echo "TEST"
