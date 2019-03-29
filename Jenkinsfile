@@ -1,3 +1,5 @@
+agentName = "ubuntu"
+
 
 pipeline {
 
