@@ -9,7 +9,6 @@ pipeline {
         stage('Login') {
             steps {
                 sh 'echo hello'
-                }
             }
         }
     }   
