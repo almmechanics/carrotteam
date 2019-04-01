@@ -1,4 +1,4 @@
-agentName = "ubuntu"
+agentName = "cucumberteam"
 
 
 pipeline {
