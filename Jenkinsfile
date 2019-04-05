@@ -3,7 +3,7 @@ agentName = "cucumberteam"
 
 pipeline {
 
-    agent { label agentName }
+    agent any
    
     stages {
         stage('Login') {
